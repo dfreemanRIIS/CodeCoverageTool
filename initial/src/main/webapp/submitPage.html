@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body style="text-align:center">
+        <h3>Loading...<h3>
+    </body>
+</html>
+<script>
+    var githubUrl = $_GET('githubURL');
+    console.log('Debug: ' + githubUrl)
+
+    function $_GET(q,s) {
+        s = (s) ? s : window.location.search;
+        var re = new RegExp('&amp;'+q+'=([^&amp;]*)','i');
+        return (s=s.replace(/^\?/,'&amp;').match(re)) ?s=s[1] :s='';
+    }
+</script>
